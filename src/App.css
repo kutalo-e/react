@@ -1,7 +1,6 @@
 .App {
   text-align: center;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +34,47 @@
   to {
     transform: rotate(360deg);
   }
+}
+.product-list{
+  width: auto;
+  max-width: 960px;
+  display:flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.product {
+  max-width: 200px;
+  margin: 0 0 40px 0;
+}
+.product__title {
+  font-size: 18px;
+}
+.product__img {
+  width: 100%;
+}
+.product__description {
+  font-size: 14px;
+  color: #999;
+}
+.product__price{
+  color: #540EAD;
+  font-weight: bold;
+}
+
+.product__button{
+  display: inline-block;
+  padding: 3px 10px 5px;
+  color: #fff;
+  background-color: #540EAD;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.product__button:hover{
+  background-color: #680BAB;
+}
+.product__controls {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
 }
