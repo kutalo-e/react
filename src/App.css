@@ -1,80 +1,117 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
+
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    align-items: center;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.product-list{
-  width: auto;
-  max-width: 960px;
-  display:flex;
-  margin: 0 auto;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.product {
-  max-width: 200px;
-  margin: 0 0 40px 0;
-}
-.product__title {
-  font-size: 18px;
-}
-.product__img {
-  width: 100%;
-}
-.product__description {
-  font-size: 14px;
-  color: #999;
-}
-.product__price{
-  color: #540EAD;
-  font-weight: bold;
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-.product__button{
-  display: inline-block;
-  padding: 3px 10px 5px;
-  color: #fff;
-  background-color: #540EAD;
-  cursor: pointer;
-  border-radius: 5px;
+button {
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    padding: 0;
+    margin: 0;
 }
-.product__button:hover{
-  background-color: #680BAB;
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 960px;
+    margin: 0 auto;
+    width: auto;
 }
+
+.product {
+    margin: 0 0 40px 0;
+    max-width: 200px;
+}
+
+.product__title {
+    color: #212121;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.product__img {
+    width: 100%;
+}
+
+.product__description {
+    color: #999;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.product__price {
+    color: #540EAD;
+    font-weight: bold;
+}
+
+.product__button {
+    background-color: #540EAD;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 3px 10px 5px;
+    text-decoration: auto;
+}
+
+.product__button:hover {
+    background-color: #680BAB;
+}
+
 .product__controls {
-  display:flex;
-  justify-content: space-between;
-  align-items: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-heart {
+    background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2221%22%20height%3D%2219%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.5%2018C5.56%2013.75%201%209.592%201%206.082%201%203.216%203.28%201%206.225%201c1.615%200%203.23.74%204.275%201.94C11.545%201.74%2013.16%201%2014.775%201%2017.72%201%2020%203.217%2020%206.082c0%203.51-4.56%207.668-9.5%2011.918z%22%20stroke%3D%22%23CB11AB%22%20stroke-width%3D%222%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 32px;
+    transition: background-image .3s ease 0s;
+    margin-left: 11px;
+    width: 32px;
+}
+
+.btn-heart:hover {
+    background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2221%22%20height%3D%2219%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M10.5%2018C5.56%2013.75%201%209.592%201%206.082%201%203.216%203.28%201%206.225%201c1.615%200%203.23.74%204.275%201.94C11.545%201.74%2013.16%201%2014.775%201%2017.72%201%2020%203.217%2020%206.082c0%203.51-4.56%207.668-9.5%2011.918z%22%20fill%3D%22%23CB11AB%22%20stroke%3D%22%23CB11AB%22%20stroke-width%3D%222%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E);
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
