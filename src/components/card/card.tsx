@@ -8,8 +8,15 @@ export interface CardProps {
 }
 
 export class Card extends React.Component<CardProps> {
+    constructor(props: CardProps){
+        super(props);
+
+        this.state = {
+            like_count: 0
+        }
+    }
     handleLikeClick = () => {
-        this.props.item.like_count += 1;
+        this.setState({like_count: this.state.like_count + 1})
     }
     render() {
         return (
