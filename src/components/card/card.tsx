@@ -8,6 +8,9 @@ export interface CardProps {
 }
 
 export class Card extends React.Component<CardProps> {
+    handleLikeClick = () => {
+        this.props.item.like_count += 1;
+    }
     render() {
         return (
             <div className={'product'}>
@@ -16,7 +19,7 @@ export class Card extends React.Component<CardProps> {
                     <h2 className={'product__title'}>
                         {this.props.item.title}
                     </h2>
-                    <LikeButton/>
+                    <LikeButton onClick={this.handleLikeClick}/>
                 </ItemsWrapper>
                 <p className={'product__description'}>
                     {this.props.item.descr}
